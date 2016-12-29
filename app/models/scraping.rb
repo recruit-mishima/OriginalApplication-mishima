@@ -28,12 +28,12 @@ class Scraping
   def self.get_article(link)
     agent = Mechanize.new
     current_page = agent.get(link)
-    elements = current_page.at('.cite').inner_text
+    elements = current_page.at('cite').inner_text
      title = elements.split(' (').first
      author = elements.match(/\d{4}/)[0].to_s.to_i
      date = elements.match(/\"(.+)\"/)[1]
-     abstract = abstract.at('.abstract p:last-child').inner_text
-    article = article.new(title: title, author: author, date: date, abstract: abstract)
+     abstract = current_page.search('.abstract p:last-child').inner_text
+    article = Article.new(title: title, author: author, date: date, abstract: abstract)
     article.save
   end
 end
