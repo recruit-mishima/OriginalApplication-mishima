@@ -28,7 +28,7 @@ class Scraping
   def self.get_article(link)
     agent = Mechanize.new
     current_page = agent.get(link)
-    elements = current_page.search('.cite').inner_text
+    elements = current_page.at('.cite').inner_text
      title = elements.split(' (').first
      author = elements.match(/\d{4}/)[0].to_s.to_i
      date = elements.match(/\"(.+)\"/)[1]
