@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Articler</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+    </head>
+    <header>
+      <p><%= @keyword1, keyword2, keyword3 AND @Year1~Year2></p>
+      <% @articles.each do |article| %>
+      <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+        <%= simple_format(tweet.text) %>
+        <span class="name"><%= tweet.name %></span>
+      </div>
+    </header>
+
+    <body>
+  
+    </body>
+  </html>
