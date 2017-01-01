@@ -8,14 +8,18 @@
     </head>
     <header>
       <p><%= @keyword1, keyword2, keyword3 AND @Year1~Year2></p>
-      <% @articles.each do |article| %>
-      <div class="content_post" style="background-image: url(<%= tweet.image %>);">
-        <%= simple_format(tweet.text) %>
-        <span class="name"><%= tweet.name %></span>
+        <p>Mypage</p>
       </div>
     </header>
 
     <body>
-  
+     <div class="contents row" >
+    <% @articles.each do |article| %>
+
+        <%= simple_format(article.titile) %>
+        <span class=""><%= article. %></span>
+      </div>
+    <% end %>
+      </div>
     </body>
   </html>
